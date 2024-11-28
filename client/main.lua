@@ -72,6 +72,7 @@ AddEventHandler('esx_ambulancejob:clsearch', function(medicId)
 end)
 
 function OnPlayerDeath()
+  if exports['yisus_duels']:isPlaying() then return end
   ESX.CloseContext()
   ClearTimecycleModifier()
   SetTimecycleModifier("REDMIST_blend")
